@@ -162,7 +162,18 @@ print("Total length of all lines is", round(total_length, 2))
 # **Note: avoid using the same variable names as earlier inside your functions!** Functions are often defined at the top of the script file (or jupyter notebook), and now that we have them here at the very end you might accidentally alter an existing variable inside your functions. To avoid this, alter the variable names inside your own functions if you re-use code from this notebook. 
 
 # YOUR CODE HERE 8 to define create_od_lines() and calculate_total_distance()
+lines2=[]
+def create_od_lines(a,b):
+  for orig,dest in zip(a,b):
+    line2=LineString([orig,dest])
+    lines2.append(line2)
+  return lines2
 
+def calculate_total_distance(lines):
+  total_length=0
+  for line in lines:
+    total_length+=line.length
+  return total_length
 
 
 # CODE FOR TESTING YOUR SOLUTION
@@ -171,8 +182,7 @@ print("Total length of all lines is", round(total_length, 2))
 # -----------------
 
 # Create origin-destination lines
-od_lines = create_od_lines(orig_points, dest_points)
-
+od_lines = create_od_lines(orig_points,dest_points)
 # Calculate the total distance
 tot_dist = calculate_total_distance(od_lines)
 
