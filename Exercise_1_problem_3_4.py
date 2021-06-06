@@ -128,7 +128,7 @@ print('lines length:', len(lines))
 from shapely.geometry import LineString
 for orig,dest in zip(orig_points,dest_points):
   line=LineString([orig,dest])
-  lines.append( line )
+  lines.append(line)
 
 # CODE FOR TESTING YOUR SOLUTION
 
