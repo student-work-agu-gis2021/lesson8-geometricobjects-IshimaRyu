@@ -169,10 +169,10 @@ def create_od_lines(a,b):
     lines2.append(line2)
   return lines2
 
-def calculate_total_distance(lines):
+def calculate_total_distance(lines2):
   total_length=0
-  for line in lines:
-    total_length+=line.length
+  for line2 in lines2:
+    total_length+=line2.length
   return total_length
 
 
