@@ -11,7 +11,7 @@
 # YOUR CODE HERE 1 to read the file
 #raise NotImplementedError()
 import pandas as pd 
-data=pd.read_csv("data/travelTimes_2015_Helsinki.txt")
+data=pd.read_table("data/travelTimes_2015_Helsinki.txt",sep=';')
 
 #Check how many rows and columns there are:
 data
@@ -26,7 +26,7 @@ print(data.head())
 # 
 
 # YOUR CODE HERE 2 to set `data`
-data=pd.DataFrame(columns=('from_x', 'from_y', 'to_x', 'to_y'))
+data=data.iloc[:,5:9]
 
 # CODE FOR TESTING YOUR SOLUTION
 
@@ -74,6 +74,11 @@ print('dest_points length:', len(dest_points))
 
 # YOUR CODE HERE 4 to append points in orig_points and dest_points
 from shapely.geometry import Point
+for i in range(len(data)):
+  orig_points.append(data,columns=('from_x', 'from_y'))
+  dest_points.append(data,columns=('to_x', 'to_y'))
+
+
 
 # CODE FOR TESTING YOUR SOLUTION
 
