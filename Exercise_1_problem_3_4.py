@@ -78,7 +78,7 @@ for index,row in data.iterrows():
   orig=Point(row['from_x'],row['from_y'])
   dest=Point(row['to_x'],row['to_y'])
   orig_points.append(orig)
-  dest_points.append(orig)
+  dest_points.append(dest)
 
 
 # CODE FOR TESTING YOUR SOLUTION
@@ -144,7 +144,7 @@ assert len(lines) == len(data), "There should be as many lines as there are rows
 # YOUR CODE HERE 7 to find total length
 total_length=0
 for line in lines:
-  total_length=total_length+line.length
+  total_length+=line.length
 
 # CODE FOR TESTING YOUR SOLUTION
 
@@ -162,6 +162,7 @@ print("Total length of all lines is", round(total_length, 2))
 # **Note: avoid using the same variable names as earlier inside your functions!** Functions are often defined at the top of the script file (or jupyter notebook), and now that we have them here at the very end you might accidentally alter an existing variable inside your functions. To avoid this, alter the variable names inside your own functions if you re-use code from this notebook. 
 
 # YOUR CODE HERE 8 to define create_od_lines() and calculate_total_distance()
+
 
 
 # CODE FOR TESTING YOUR SOLUTION
