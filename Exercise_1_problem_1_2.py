@@ -76,7 +76,7 @@ def create_poly_geom(coords):
   assert len(coords)>=3,"Polygon object requires at least three Points!"
   for i in coords:
     assert type(i) is tuple, "All list values should be coordinate tuples!"
-  poly=Polygon(coords)
+  poly = Polygon(coords)
   return poly
 
 # Demonstrate the usage of the function. For example, create a Polygon with three points: `(45.2, 22.34)`, `(100.22, -3.20)` & `(70.0, 10.20)`.
