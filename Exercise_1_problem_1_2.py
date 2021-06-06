@@ -31,7 +31,7 @@ print(point1.geom_type)
 
 # YOUR CODE HERE 2 to define create_line_geom()
 def create_line_geom(points):
-  assert type(points)=="Input should be a list!"
+  assert type(points)=="list","Input should be a list!"
   assert len(points)>=2, "LineString object requires at least two Points!"
   line=LineString([points[0],points[1]])
   return line
@@ -113,7 +113,9 @@ except Exception as e:
 # 
 
 #  YOUR CODE HERE 6 to define get_centroid()
-
+def get_centroid(geom):
+  assert type(geom)==Polygon or type(geom)==LineString or type(geom)==Polygon,"Input should be a Shapely geometry!"
+  return geom.centroid
 
 # Test and demonstrate the usage of the function. You can, for example, create shapely objects using the functions you created in problem 1 and print out information about their centroids:
 # 
