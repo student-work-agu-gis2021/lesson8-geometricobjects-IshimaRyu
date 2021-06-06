@@ -26,9 +26,10 @@ print(data.head())
 # 
 
 # YOUR CODE HERE 2 to set `data`
-
+data=pd.DataFrame(columns=('from_x', 'from_y', 'to_x', 'to_y'))
 
 # CODE FOR TESTING YOUR SOLUTION
+
 print(list(data.columns))
 
 
